@@ -487,6 +487,59 @@ img {
     font-weight: bold; /* سمك الخط */
 }
 
+        .bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #000, #000); /* خلفية متدرجة */
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    animation: slideUp 0.5s ease-out forwards;
+    opacity: 0.95;
+}
+
+/* أنميشن عند الظهور */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.bottom-menu a {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    flex: 1;
+    padding: 3px 0;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.bottom-menu a:hover {
+    color: #FFD700; /* تغيير اللون عند التمرير */
+    transform: scale(1.2); /* تكبير العنصر عند التمرير */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* تأثير توهج خفيف */
+}
+
+.bottom-menu a i {
+    font-size: 15px;
+    margin-bottom: 2px;
+    transition: transform 0.4s ease;
+}
+
+.bottom-menu a:hover i {
+    transform: rotate(360deg); /* دوران الأيقونة عند التمرير */
+}
     </style>
 
     <!-- إضافة الأنماط الخاصة بك هنا -->
