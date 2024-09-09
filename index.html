@@ -540,6 +540,169 @@ img {
 .bottom-menu a:hover i {
     transform: rotate(360deg); /* دوران الأيقونة عند التمرير */
 }
+
+        /* تأثير التدرج للخلفية */
+body {
+    background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* تأثير التدرج على الأقسام */
+.section-container {
+    background: rgba(34, 34, 34, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* تأثير عنوان القسم */
+.section-title {
+    background: linear-gradient(90deg, #f39c12, #f1c40f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* تأثير الأيقونة في عنوان القسم */
+.section-title i {
+    font-size: 1.4em;
+    color: #f39c12;
+    margin-right: 14px;
+}
+
+/* تأثير التمرير للقائمة */
+.episode-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.episode-list::-webkit-scrollbar {
+    height: 6px;
+}
+
+.episode-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.episode-list::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+/* تأثير الحركة على العناصر */
+.episode-item {
+    flex: 0 0 auto;
+    width: 120px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.episode-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.episode-item img {
+    width: 100%;
+    height: auto;
+    max-height: 170px;
+    object-fit: cover;
+    transition: filter 0.3s;
+}
+
+.episode-item:hover img {
+    filter: brightness(80%);
+}
+
+/* زر مشاهدة الفيديو */
+.episode-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #1a2a6c, #b21f1f);
+    color: #ffffff;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.episode-button:hover {
+    background: linear-gradient(90deg, #1a2a6c, #b21f1f);
+    transform: scale(1.05);
+}
+
+.episode-button i {
+    margin-right: 8px;
+}
+
+/* تأثير حركة شريط البحث */
+.search-bar {
+    width: 60%;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 2px solid #a832a6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #a832a6;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* تأثيرات القائمة الجانبية */
+.sidebar {
+    background-color: #1c1c1c;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+/* تأثيرات التمرير في القائمة الجانبية */
+.sidebar a {
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+/* تأثيرات الرسالة الخاصة بعدم وجود نتائج */
+#noResultsMessage {
+    font-size: 1.5em;
+    color: #ff6f6f;
+    margin-top: 20px;
+}
+
+/* تأثير التمرير للأيقونة في أسفل الشاشة */
+.telegram-icon {
+    position: fixed;
+    bottom: 70px;
+    right: 370px;
+    font-size: 60px;
+    color: #87CEEB;
+    cursor: pointer;
+    transition: transform 1.3s, color 0.3s;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.2);
+    color: #1e90ff;
+}
     </style>
 
     <!-- إضافة الأنماط الخاصة بك هنا -->
