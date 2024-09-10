@@ -541,7 +541,7 @@ img {
     transform: rotate(360deg); /* دوران الأيقونة عند التمرير */
 }
 
-   /* تأثير التدرج للخلفية */
+/* تأثير التدرج للخلفية */
 body {
     background: linear-gradient(135deg, #000000, #1a1a1a);
     color: #e0e0e0;
@@ -554,31 +554,60 @@ body {
 
 /* تأثير التدرج على الأقسام */
 .section-container {
-    background: rgba(20, 20, 20, 0.8);
+    background: rgba(25, 25, 25, 0.9);
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
     padding: 20px;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.section-container:hover {
+    transform: scale(1.02);
 }
 
 /* تأثير عنوان القسم */
 .section-title {
-    background: linear-gradient(90deg, #ff5722, #ff9800);
+    background: linear-gradient(90deg, #ff6f00, #ff9800);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 15px;
     padding-left: 20px;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff9800;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.section-title:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 /* تأثير الأيقونة في عنوان القسم */
 .section-title i {
-    font-size: 1.4em;
-    color: #ff5722;
+    font-size: 1.5em;
+    color: #ff6f00;
     margin-right: 14px;
+    transition: color 0.3s ease;
+}
+
+.section-title:hover i {
+    color: #ff9800;
 }
 
 /* تأثير التمرير للقائمة */
@@ -609,12 +638,14 @@ body {
     width: 120px;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    border: 2px solid #333;
 }
 
 .episode-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border: 2px solid #ff9800;
 }
 
 .episode-item img {
@@ -626,7 +657,7 @@ body {
 }
 
 .episode-item:hover img {
-    filter: brightness(80%);
+    filter: brightness(70%);
 }
 
 /* زر مشاهدة الفيديو */
@@ -637,14 +668,16 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: linear-gradient(90deg, #333, #555);
+    background: linear-gradient(90deg, #1a2a6c, #ff9800);
     color: #ffffff;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .episode-button:hover {
-    background: linear-gradient(90deg, #444, #666);
+    background: linear-gradient(90deg, #ff9800, #ff5722);
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .episode-button i {
@@ -702,7 +735,7 @@ body {
 .telegram-icon:hover {
     transform: scale(1.2);
     color: #1e90ff;
-            } 
+}
     </style>
 
     <!-- إضافة الأنماط الخاصة بك هنا -->
